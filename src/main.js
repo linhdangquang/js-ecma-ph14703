@@ -1,13 +1,16 @@
 import Navigo from 'navigo';
 
-const router = new Navigo('/');
+const router = new Navigo('/', { linksSelector: 'a' });
 
+const render = (content) => {
+  document.querySelector('#app').innerHTML = content;
+};
 router.on({
   '/': () => {
-    document.body.innerHTML = '<a href="/about" class="text-xl uppercase text-red-600">About</a>';
+    render('<h1  class="text-xl uppercase text-red-600">Home Page</h1>');
   },
   '/about': () => {
-    document.body.innerHTML = '<a href="/" class="text-xl uppercase text-red-600">Home Page</a>';
+    render('<h1  class="text-xl uppercase text-red-600">about Page</h1>');
   },
 });
 

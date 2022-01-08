@@ -11,9 +11,9 @@ const postsData = [
     id: 1,
     img: 'https://nld.mediacdn.vn/291774122806476800/2021/8/13/fpt-16288551951102020757499.jpeg',
     title:
-          'Vinh danh 1000 sinh viên đẹp trai nhất FPT Polytechic học kỳ Spring 2022',
+      'Vinh danh 1000 sinh viên đẹp trai nhất FPT Polytechic học kỳ Spring 2022',
     description:
-          "Elon Musk's Tesla has absolutely decimated the competition when it comes to electric vehicles and has since become one of the United States' largest companies despite the number of vehicles it has so…",
+      "Elon Musk's Tesla has absolutely decimated the competition when it comes to electric vehicles and has since become one of the United States' largest companies despite the number of vehicles it has so…",
   },
 
   {
@@ -21,7 +21,7 @@ const postsData = [
     img: 'https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1307043460/large_image_1307043460.jpg',
     title: "Coca-Cola's Upcoming Dividend Increase",
     description:
-          "Elon Musk's Tesla has absolutely decimated the competition when it comes to electric vehicles and has since become one of the United States' largest companies despite the number of vehicles it has so…",
+      "Elon Musk's Tesla has absolutely decimated the competition when it comes to electric vehicles and has since become one of the United States' largest companies despite the number of vehicles it has so…",
   },
   {
     id: 3,
@@ -44,15 +44,14 @@ const postsData = [
     title:
       'PM Modi to virtually inaugurate 2nd CNCI campus in Kolkata on January 7',
     description:
-      'Prime Minister narendra Modi, virtual inauguration, second Chittaranjan National Cancer Institute campus, Kolkata, Chittaranjan National Cancer Institute campus inauguration on January 7, national news updates, Prime Minister narendra Modi latest news updates…',
+      'Prime Minister narendra Modi, virtual inauguration, second Chittaranjan National Cancer Institute campus, Kolkata, Chittaranjan National Cancer I',
   },
   {
     id: 6,
     img: 'https://f.thuongtruong.com.vn/IMAGES/2021/06/15/20210615142800-127214.jpg',
-    title:
-          'Chicago teacher battling cancer refuses to stop in-person classes',
+    title: 'Chicago teacher battling cancer refuses to stop in-person classes',
     description:
-          "Chicago teacher Joseph Ocol said: 'I joined the Chicago public schools as a teacher and I believe my role should be inside the classroom with my students.",
+      "Chicago teacher Joseph Ocol said: 'I joined the Chicago public schools as a teacher and I believe my role should be inside the classroom with my students.",
   },
 ];
 

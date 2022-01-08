@@ -14,18 +14,15 @@ const HomePage = {
         id, title, img, description,
       }) => /* html */ `
                 <div class="flex flex-col  border-2 px-6 py-4 hover:shadow-lg transition-shadow">
-                    <a class="w-full" href=""><img class="w-full h-56" src="${img}" alt=""></a>
-                    <a href="/${id}" class="text-orange-700 font-medium py-2">${title}</a>
+                    <a class="w-full" href="/${id}"><img class="w-full h-56" src="${img}" alt=""></a>
+                    <a href="/${id}" class="text-orange-700 font-medium py-2 flex-1">${title}</a>
                     <small class="pb-2">${description}</small>
                 </div>
                 `,
     )
     .join('')}
             </div>
-
-            
     <section>
-       
     `;
   },
 };

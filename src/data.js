@@ -1,9 +1,24 @@
 const menuList = [
-  'trang chủ',
-  'tuyển sinh',
-  'chương trình đào tạo',
-  'góc sinh viên',
-  'tuyển dụng',
+  {
+    text: 'trang chủ',
+    href: '/',
+  },
+  {
+    text: 'tuyển sinh',
+    href: '/tuyen-sinh',
+  },
+  {
+    text: 'chương trình đào tạo',
+    href: '/chuong-trinh-dao-tao',
+  },
+  {
+    text: 'góc sinh viên',
+    href: '/goc-sinh-vien',
+  },
+  {
+    text: 'giới thiệu',
+    href: '/gioi-thieu',
+  },
 ];
 
 const postsData = [

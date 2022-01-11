@@ -11,17 +11,30 @@ import SignInForm from './pages/signin';
 import Dashboard from './pages/admin/dashboard';
 
 const router = new Navigo('/', { linksSelector: 'a' });
+const headerEl = document.querySelector('#header');
+const contentEl = document.querySelector('#content');
+const footerEl = document.querySelector('#footer');
+const container = document.querySelector('#container');
 
 const print = (content) => {
-  document.querySelector('#header').innerHTML = Header.render();
-  document.querySelector('#content').innerHTML = content;
-  document.querySelector('#footer').innerHTML = Footer.render();
+  headerEl.innerHTML = Header.render();
+  contentEl.innerHTML = content;
+  footerEl.innerHTML = Footer.render();
+  container.classList.add('container');
+  container.classList.remove('container-fluid');
 };
 const printAdmin = (content) => {
-  document.body.innerHTML = content;
+  headerEl.innerHTML = '';
+  contentEl.innerHTML = content;
+  footerEl.innerHTML = '';
+  container.classList.remove('container');
+  container.classList.add('container-fluid');
 };
 router.on({
   '/': () => {
+    print(HomePage.render());
+  },
+  '/index': () => {
     print(HomePage.render());
   },
   '/gioi-thieu': () => {

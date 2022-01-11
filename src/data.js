@@ -41,7 +41,7 @@ const dashboardMenu = [
   },
   {
     text: 'Logout',
-    href: '/',
+    href: '/index',
     icon: 'ri-logout-circle-line',
   },
 

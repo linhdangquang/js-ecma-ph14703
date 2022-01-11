@@ -15,7 +15,7 @@ const Navigation = {
                         <span class="text-sm font-medium flex items-center pl-12"><i class="${icon} text-xl align-baseline"></i> ${text}</span>
                     </a>
                 </li>
-                `)}
+                `).join('')}
             </ul>
             </div>
         </nav>

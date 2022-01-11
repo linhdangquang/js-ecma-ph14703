@@ -5,9 +5,10 @@ const NewsDetails = {
     if (id) {
       const foundPost = postsData.find((post) => post.id === id);
       return /* html */ `
-            <div>
-                <h1>${foundPost.title}</h1>
+            <div class="py-4">
+                <h1 class="font-bold text-xl">${foundPost.title}</h1>
                 <img src="${foundPost.img}" alt="">
+                <p>${foundPost.desc}</p>
                 <small>${foundPost.createdAt}</small>
             </div>
             `;

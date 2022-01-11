@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
-    "navigo": "^8.11.1"
+    "navigo": "^8.11.1",
+    "remixicon": "^2.5.0"
   }
 }

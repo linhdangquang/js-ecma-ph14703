@@ -12,8 +12,8 @@ const SignInForm = {
             <input type="password" class="rounded-md border-0 focus:ring-teal-800 focus:ring-2 shadow-md shadow-teal-800" placeholder="Enter Password">
             <div class="flex justify-between">
                 <div class="flex items-center ml-1">
-                <input type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded" name="" id="">
-                  <p class="text-white ml-1">Remember me</p>
+                <input type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded cursor-pointer" name="" id="remember">
+                  <label for="remember" class="text-white ml-1 cursor-pointer">Remember me</label>
                 </div>
                 <div><a href="" class="text-sky-900" >Forgot your password?</a></div>
               </div>

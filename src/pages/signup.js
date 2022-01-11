@@ -13,9 +13,9 @@ const SignUpForm = {
               <input type="password" class="rounded-md border-0 focus:ring-teal-800 focus:ring-2 shadow-md shadow-teal-800" placeholder="Enter Password">
               <div class="flex justify-between">
                   <div class="flex items-center ml-1">
-                  <input type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded" name="" id="">
-                    <p class="text-white ml-1">Remember me</p>
-                  </div>
+                  <input type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded cursor-pointer" name="" id="remember">
+                  <label for="remember" class="text-white ml-1 cursor-pointer">Remember me</label>
+                </div>
                   <div><a href="/signin" class="text-teal-50" >Đăng nhập</a></div>
                 </div>
               <input type="button" value="Register now" class="bg-white text-teal-800 uppercase font-black p-2 rounded-md cursor-pointer hover:bg-teal-700 hover:text-white hover:border-white active:scale-95  transition-colors shadow-md shadow-teal-800">

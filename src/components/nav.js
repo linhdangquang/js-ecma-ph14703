@@ -4,9 +4,9 @@ const NavSearchForm = {
   render() {
     return /* html */ `
     <div class="search-form px-1">
-    <form action="">
-      <input type="text" class="pr-4 p-0 rounded-sm outline-yellow-500  outline-2" />
-      <button class="button bg-blue-800 hover:bg-sky-900 transition-colors text-white px-4 uppercase border rounded-sm">
+    <form action="" class="flex justify-between">
+      <input type="text" class="mr-1 pl-1  p-0 rounded-sm outline-yellow-500  outline-2 py-px" />
+      <button class="button bg-blue-800 hover:bg-sky-900 transition-colors text-sm py-px text-white px-4 uppercase border rounded-sm">
         Tìm kiếm
       </button>
     </form>

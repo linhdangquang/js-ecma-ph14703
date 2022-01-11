@@ -12,7 +12,7 @@ const Navigation = {
                 ${dashboardMenu.map(({ text, href, icon }) => /* html */`
                 <li>
                     <a href="${href}" class="block  items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-                        <span class="text-sm font-medium flex items-center pl-12"><i class="${icon} text-xl align-baseline"></i> ${text}</span>
+                        <span class="text-sm font-medium flex items-center pl-12"><i class="${icon} text-xl"></i> ${text}</span>
                     </a>
                 </li>
                 `).join('')}

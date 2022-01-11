@@ -4,26 +4,31 @@ import AboutPage from './pages/about';
 import { TuyenSinhPage, ChuongtrinhdaotaoPage } from './pages/tuyensinh';
 import Header from './components/header';
 import Footer from './components/footer';
+import NewsDetails from './pages/news';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 
-const render = (content) => {
-  document.querySelector('#header').innerHTML = Header.print();
-  document.querySelector('#content').innerHTML = content.print();
-  document.querySelector('#footer').innerHTML = Footer.print();
+const print = (content) => {
+  document.querySelector('#header').innerHTML = Header.render();
+  document.querySelector('#content').innerHTML = content;
+  document.querySelector('#footer').innerHTML = Footer.render();
 };
 router.on({
   '/': () => {
-    render(HomePage);
+    print(HomePage.render());
   },
   '/gioi-thieu': () => {
-    render(AboutPage);
+    print(AboutPage.render());
   },
   '/tuyen-sinh': () => {
-    render(TuyenSinhPage);
+    print(TuyenSinhPage.render());
   },
   '/chuong-trinh-dao-tao': () => {
-    render(ChuongtrinhdaotaoPage);
+    print(ChuongtrinhdaotaoPage.render());
+  },
+  '/news/:id': ({ data }) => {
+    const { id } = data;
+    print(NewsDetails.render(id));
   },
 });
 

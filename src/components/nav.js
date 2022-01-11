@@ -1,7 +1,7 @@
 import { menuList } from '../data';
 
 const NavSearchForm = {
-  print() {
+  render() {
     return /* html */ `
     <div class="search-form px-1">
     <form action="">
@@ -16,13 +16,13 @@ const NavSearchForm = {
 };
 
 const Nav = {
-  print() {
+  render() {
     return /* html */`
     <nav id="navbar" class="bg-orange-500 flex justify-between items-center">
     <ul id="nav-menu" class="flex text-white justify-between pl-6">
-    ${menuList.map(({ text, href }) => `<li class="px-4 hover:underline  underline-offset-4 decoration-2 first-letter:uppercase"><a class="py-3 block" href="${href}">${text}</a></li>`).join('')}
+    ${menuList.map(({ text, href }) => `<li class="px-4 hover:underline underline-offset-4 decoration-2 first-letter:uppercase"><a class="py-3 block" href="${href}">${text}</a></li>`).join('')}
     </ul>
-    ${NavSearchForm.print()}
+    ${NavSearchForm.render()}
     `;
   },
 };

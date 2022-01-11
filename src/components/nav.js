@@ -5,7 +5,7 @@ const NavSearchForm = {
     return /* html */ `
     <div class="search-form px-1">
     <form action="">
-      <input type="text" class="pr-4 rounded-sm outline-yellow-500  outline-2" />
+      <input type="text" class="pr-4 p-0 rounded-sm outline-yellow-500  outline-2" />
       <button class="button bg-blue-800 hover:bg-sky-900 transition-colors text-white px-4 uppercase border rounded-sm">
         Tìm kiếm
       </button>

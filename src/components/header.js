@@ -1,5 +1,4 @@
 import Nav from './nav';
-import Banner from './banner';
 
 const Header = {
   render() {
@@ -11,7 +10,6 @@ const Header = {
     </div>
         ${Nav.render()}
     </nav>
-      ${Banner.render()}
   </header>`;
   },
 };

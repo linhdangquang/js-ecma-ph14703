@@ -5,6 +5,8 @@ import { TuyenSinhPage, ChuongtrinhdaotaoPage } from './pages/tuyensinh';
 import Header from './components/header';
 import Footer from './components/footer';
 import NewsDetails from './pages/news';
+import SignUpForm from './pages/signup';
+import SignInForm from './pages/signin';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 
@@ -25,6 +27,12 @@ router.on({
   },
   '/chuong-trinh-dao-tao': () => {
     print(ChuongtrinhdaotaoPage.render());
+  },
+  '/signup': () => {
+    print(SignUpForm.render());
+  },
+  '/signin': () => {
+    print(SignInForm.render());
   },
   '/news/:id': ({ data }) => {
     const { id } = data;

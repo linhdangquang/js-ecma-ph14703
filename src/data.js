@@ -19,6 +19,14 @@ const menuList = [
     text: 'giới thiệu',
     href: '/gioi-thieu',
   },
+  {
+    text: 'đăng nhập',
+    href: '/signin',
+  },
+  {
+    text: 'đăng ký',
+    href: '/signup',
+  },
 ];
 
 const postsData = [{

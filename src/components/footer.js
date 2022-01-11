@@ -1,5 +1,5 @@
 const Footer = {
-  print() {
+  render() {
     return /* html */ `
     <footer class="bg-gradient-to-bl from-sky-500 to-black p-6">
     <p class="text-white text-center uppercase">

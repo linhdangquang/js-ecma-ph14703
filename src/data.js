@@ -36,7 +36,7 @@ const dashboardMenu = [
   },
   {
     text: 'News',
-    href: '/news',
+    href: '/admin/news',
     icon: 'ri-newspaper-line',
   },
   {

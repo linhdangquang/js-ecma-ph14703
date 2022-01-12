@@ -9,6 +9,9 @@ import NewsDetails from './pages/news';
 import SignUpForm from './pages/signup';
 import SignInForm from './pages/signin';
 import Dashboard from './pages/admin/dashboard';
+import News from './pages/admin/news';
+import AddNews from './pages/admin/components/addNewsForm';
+import EditNews from './pages/admin/components/editNewsForm';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 const headerEl = document.querySelector('#header');
@@ -58,6 +61,15 @@ router.on({
   },
   '/admin/dashboard': () => {
     printAdmin(Dashboard.render());
+  },
+  '/admin/news': () => {
+    printAdmin(News.render());
+  },
+  'admin/news/add': () => {
+    printAdmin(AddNews.render());
+  },
+  'admin/news/:id/edit': () => {
+    printAdmin(EditNews.render());
   },
 });
 

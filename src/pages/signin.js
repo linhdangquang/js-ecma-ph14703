@@ -2,7 +2,7 @@ const SignInForm = {
   render() {
     return /* html */ `
     <div class="my-16">
-    <div class="bg-emerald-500 w-2/4 py-6 rounded-md mx-auto">
+    <div class="bg-emerald-500 w-2/4 py-6 rounded-md mx-auto shadow-md drop-shadow-md shadow-green-400">
         <div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1200px-FPT_logo_2010.svg.png" alt="" class="w-20 mx-auto">
         </div>

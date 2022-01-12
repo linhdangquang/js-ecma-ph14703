@@ -12,6 +12,7 @@ import Dashboard from './pages/admin/dashboard';
 import News from './pages/admin/news';
 import AddNews from './pages/admin/components/addNewsForm';
 import EditNews from './pages/admin/components/editNewsForm';
+import charts from './pages/admin/components/chart';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 const headerEl = document.querySelector('#header');
@@ -61,6 +62,7 @@ router.on({
   },
   '/admin/dashboard': () => {
     printAdmin(Dashboard.render());
+    charts.render();
   },
   '/admin/news': () => {
     printAdmin(News.render());

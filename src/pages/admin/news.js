@@ -1,5 +1,6 @@
 import Navigation from './components/navigation';
 import AdminHeader from './components/header';
+import AdminFooter from './components/footer';
 
 const News = {
   render() {
@@ -77,6 +78,7 @@ const News = {
                 </div>
             </div>
         </div>
+        ${AdminFooter.render()}
         </div>
       </div>
       

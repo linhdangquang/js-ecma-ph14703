@@ -1,5 +1,6 @@
 import Navigation from './components/navigation';
 import AdminHeader from './components/header';
+import AdminFooter from './components/footer';
 
 const Dashboard = {
   render() {
@@ -36,10 +37,10 @@ const Dashboard = {
                   <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
                     <div class="flex flex-wrap items-center">
                       <div class="relative w-full max-w-full flex-grow flex-1">
-                        <h6 class="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
+                        <h6 class="uppercase text-gray-400 mb-1 text-xs font-semibold">
                           Performance
                         </h6>
-                        <h2 class="text-blueGray-700 text-xl font-semibold">
+                        <h2 class="text-gray-700 text-xl font-semibold">
                           Total orders
                         </h2>
                       </div>
@@ -54,6 +55,7 @@ const Dashboard = {
                 </div>
               </div>
           </div>
+          ${AdminFooter.render()}
           </div>
       </div>
       

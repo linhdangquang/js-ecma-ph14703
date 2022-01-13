@@ -2,10 +2,9 @@ import Navigo from 'navigo';
 import 'remixicon/fonts/remixicon.css';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
-import { TuyenSinhPage, ChuongtrinhdaotaoPage } from './pages/tuyensinh';
 import Header from './components/header';
 import Footer from './components/footer';
-import NewsDetails from './pages/news';
+import { NewsDetails, NewsPage } from './pages/news';
 import SignUpForm from './pages/signup';
 import SignInForm from './pages/signin';
 import Dashboard from './pages/admin/dashboard';
@@ -44,17 +43,14 @@ router.on({
   '/gioi-thieu': () => {
     print(AboutPage.render());
   },
-  '/tuyen-sinh': () => {
-    print(TuyenSinhPage.render());
-  },
-  '/chuong-trinh-dao-tao': () => {
-    print(ChuongtrinhdaotaoPage.render());
-  },
   '/signup': () => {
     print(SignUpForm.render());
   },
   '/signin': () => {
     print(SignInForm.render());
+  },
+  '/news': () => {
+    print(NewsPage.render());
   },
   '/news/:id': ({ data }) => {
     const { id } = data;

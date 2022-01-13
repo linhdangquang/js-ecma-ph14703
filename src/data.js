@@ -4,16 +4,12 @@ const menuList = [
     href: '/',
   },
   {
-    text: 'tuyển sinh',
-    href: '/tuyen-sinh',
-  },
-  {
-    text: 'chương trình đào tạo',
-    href: '/chuong-trinh-dao-tao',
-  },
-  {
     text: 'giới thiệu',
     href: '/gioi-thieu',
+  },
+  {
+    text: 'news',
+    href: '/news',
   },
   {
     text: 'đăng nhập',

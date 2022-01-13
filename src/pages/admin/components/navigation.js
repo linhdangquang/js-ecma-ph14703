@@ -3,8 +3,8 @@ import { dashboardMenu } from '../../../data';
 const Navigation = {
   render() {
     return /* html */ `
-    <nav class ="min-h-screen flex flex-row">
-            <div class="flex flex-col w-56 bg-white rounded-r-3xl overflow-hidden">
+    <nav class ="min-h-screen flex flex-row w-64 pr-14">
+            <div class="min-h-screen flex flex-col w-56 bg-white rounded-r-3xl overflow-hidden fixed top-0 left-0  ">
             <div class="flex items-center justify-center h-20 shadow-md">
                 <h1 class="text-3xl uppercase text-indigo-500">LinhDQ</h1>
             </div>

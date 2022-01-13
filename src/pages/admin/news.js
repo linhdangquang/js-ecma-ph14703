@@ -1,6 +1,7 @@
 import Navigation from './components/navigation';
 import AdminHeader from './components/header';
 import AdminFooter from './components/footer';
+import { postsData } from '../../data';
 
 const News = {
   render() {
@@ -47,32 +48,42 @@ const News = {
                     </tr>
                     </thead>
                     <tbody>
+                        ${postsData
+    .map(
+      ({
+        id,
+        title,
+        img,
+        desc,
+        createdAt,
+      }) => /* html */ `
                         <tr class="border-b">
-                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 text-left">
-                            <span class="font-black text-gray-600">
-                                1
-                            </span>
-                            </th>
-                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?
-                            </td>
-                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                                <img src="http://placeimg.com/640/480/fashion" alt="" class="h-12 w-12">
-                            </td>
-                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                                Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals
-                            </td>
-                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                                2022-01-10T07:26:52.549Z
-                            </td>
-                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            <div class="flex">
-                            <a href="/admin/news/1/edit" class="uppercase font-semibold hover:text-sky-600">edit
-                            </a>
-                            </td>
-                        </tr>
-                    
-                    
+                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 text-left">
+                        <span class="font-black text-gray-600">
+                            ${id}
+                        </span>
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                            ${title}
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                            <img src="${img}" alt="" class="h-12 w-12">
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                            ${desc}
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                            ${createdAt}
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                        <div class="flex">
+                        <a href="/admin/news/${id}/edit" class="uppercase font-semibold hover:text-sky-600">edit
+                        </a>
+                        </td>
+                    </tr>
+                                        `,
+    )
+    .join('')}
                     </tbody>
                 </table>
                 </div>

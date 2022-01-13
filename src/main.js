@@ -70,8 +70,9 @@ router.on({
   'admin/news/add': () => {
     printAdmin(AddNews.render());
   },
-  'admin/news/:id/edit': () => {
-    printAdmin(EditNews.render());
+  'admin/news/:id/edit': ({ data }) => {
+    const { id } = data;
+    printAdmin(EditNews.render(id));
   },
 });
 

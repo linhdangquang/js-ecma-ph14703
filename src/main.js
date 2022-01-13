@@ -37,7 +37,7 @@ router.on({
   '/': () => {
     print(HomePage.render());
   },
-  '/index': () => {
+  '/#container': () => {
     print(HomePage.render());
   },
   '/gioi-thieu': () => {

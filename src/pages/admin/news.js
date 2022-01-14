@@ -19,7 +19,7 @@ const News = {
                         News Tables
                     </h3>
                     </div>
-                    <a href="/admin/news/add" class=" text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add</a>
+                    <a href="/admin/news/add" class=" text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 flex items-center "><span class="pr-1"><i class="ri-add-circle-line align-middle"></i></span> Add</a>
                 </div>
                 </div>
                 <div class="block w-full overflow-x-auto">

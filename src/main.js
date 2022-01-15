@@ -1,6 +1,7 @@
 import Navigo from 'navigo';
 import 'remixicon/fonts/remixicon.css';
 import HomePage from './pages/home';
+import NotFoundPage from './pages/notFound';
 import AboutPage from './pages/about';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -72,4 +73,5 @@ router.on({
   },
 });
 
+router.notFound(() => { print(NotFoundPage.render()); });
 router.resolve();

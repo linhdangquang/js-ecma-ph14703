@@ -1,6 +1,7 @@
 const AdminHeader = {
   render(pageTile) {
     return /* html */ `
+    
         <div class=" rounded-l-2xl bg-indigo-600 md:px-10 mx-auto w-full shadow-md">
         <nav class="flex justify-between items-center pt-8">
             <h1 class="px-4 pt-4 text-white text-lg uppercase">${pageTile}</h1>
@@ -130,6 +131,7 @@ const AdminHeader = {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
 

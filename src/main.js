@@ -1,3 +1,4 @@
+// import '@themesberg/flowbite';
 import Navigo from 'navigo';
 import 'remixicon/fonts/remixicon.css';
 import HomePage from './pages/home';
@@ -33,7 +34,9 @@ const printAdmin = (content) => {
   footerEl.innerHTML = '';
   container.classList.remove('container');
   container.classList.add('container-fluid');
+  // eslint-disable-next-line no-restricted-globals
 };
+
 router.on({
   '/': () => {
     print(HomePage.render());

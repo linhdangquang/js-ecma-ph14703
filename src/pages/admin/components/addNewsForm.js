@@ -12,8 +12,8 @@ const AddNews = {
                 <div class="w-1/2 shadow-lg p-4 ml-14 mt-4 bg-slate-100 rounded drop-shadow-lg">
                     <form enctype="multipart">
                     <div class="mb-6">
-                    <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
-                    <input type="text" id="title" class="shadow-sm  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"required>
+                    <label for="title" class="block mb-2 text-sm font-medium">Title</label>
+                    <input type="text" id="title" class="shadow-sm  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full "required>
                     </div>
                     <div class="mb-6">
                     <label for="file" class="">Images</label>

@@ -7,6 +7,18 @@
         {
             "src": "/news",
             "dest": "/"
+        },
+        {
+            "src": "/admin/news",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/news/:id",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/news/add",
+            "dest": "/"
         }
     ]
 }

@@ -3,7 +3,7 @@ import AdminHeader from './header';
 import AdminFooter from './footer';
 
 const AddNews = {
-  async render() {
+  render() {
     return /* html */ `
         <div class="container-fluid admin-container flex flex-row bg-gray-100">
         ${Navigation.render()}

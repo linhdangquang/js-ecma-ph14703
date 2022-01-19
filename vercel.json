@@ -9,6 +9,14 @@
             "dest": "/"
         },
         {
+            "src": "/dashboard",
+            "dest": "/"
+        },
+        {
+            "src": "/news/:id",
+            "dest": "/"
+        },
+        {
             "src": "/admin/news",
             "dest": "/"
         },

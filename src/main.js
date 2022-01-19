@@ -21,60 +21,66 @@ const contentEl = document.querySelector('#content');
 const footerEl = document.querySelector('#footer');
 const container = document.querySelector('#container');
 
-const print = (content) => {
+const print = async (content, id) => {
   headerEl.innerHTML = Header.render();
-  contentEl.innerHTML = content;
+  contentEl.innerHTML = await content.render(id);
   footerEl.innerHTML = Footer.render();
   container.classList.add('container');
   container.classList.remove('container-fluid');
 };
-const printAdmin = (content) => {
+const printAdmin = async (content, id) => {
   headerEl.innerHTML = '';
-  contentEl.innerHTML = content;
+  contentEl.innerHTML = await content.render(id);
   footerEl.innerHTML = '';
   container.classList.remove('container');
   container.classList.add('container-fluid');
-  // eslint-disable-next-line no-restricted-globals
+};
+const printDashboardHome = (content) => {
+  headerEl.innerHTML = '';
+  contentEl.innerHTML = content.render();
+  footerEl.innerHTML = '';
+  container.classList.remove('container');
+  container.classList.add('container-fluid');
 };
 
 router.on({
   '/': () => {
-    print(HomePage.render());
+    print(HomePage);
   },
   '/#container': () => {
-    print(HomePage.render());
+    print(HomePage);
   },
   '/gioi-thieu': () => {
-    print(AboutPage.render());
+    print(AboutPage);
   },
   '/signup': () => {
-    print(SignUpForm.render());
+    print(SignUpForm);
   },
   '/signin': () => {
-    print(SignInForm.render());
+    print(SignInForm);
   },
   '/news': () => {
-    print(NewsPage.render());
+    print(NewsPage);
   },
   '/news/:id': ({ data }) => {
     const { id } = data;
-    print(NewsDetails.render(id));
+    print(NewsDetails, id);
   },
   '/admin/dashboard': () => {
-    printAdmin(Dashboard.render());
+    printDashboardHome(Dashboard);
     charts.render();
   },
   '/admin/news': () => {
-    printAdmin(News.render());
+    printAdmin(News);
   },
   'admin/news/add': () => {
-    printAdmin(AddNews.render());
+    printAdmin(AddNews);
   },
   'admin/news/:id/edit': ({ data }) => {
     const { id } = data;
-    printAdmin(EditNews.render(id));
+    printAdmin(EditNews, id);
   },
 });
 
-router.notFound(() => { print(NotFoundPage.render()); });
+router.notFound(() => { print(NotFoundPage); });
 router.resolve();

@@ -1,10 +1,10 @@
 import Navigation from './components/navigation';
 import AdminHeader from './components/header';
 import AdminFooter from './components/footer';
-import { postsData } from '../../data';
+import NewsList from './components/newsList';
 
 const News = {
-  render() {
+  async render() {
     return /* html */ `
       <div class="container-fluid admin-container flex flex-row bg-gray-100">
         ${Navigation.render()}
@@ -48,42 +48,7 @@ const News = {
                     </tr>
                     </thead>
                     <tbody>
-                        ${postsData
-    .map(
-      ({
-        id,
-        title,
-        img,
-        desc,
-        createdAt,
-      }) => /* html */ `
-                        <tr class="border-b">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 text-left">
-                        <span class="font-black text-gray-600">
-                            ${id}
-                        </span>
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            ${title}
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            <img src="${img}" alt="" class="h-12 w-12">
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            ${desc}
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                            ${createdAt}
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                        <div class="flex">
-                        <a href="/admin/news/${id}/edit" class="uppercase font-semibold hover:text-sky-600">edit
-                        </a>
-                        </td>
-                    </tr>
-                                        `,
-    )
-    .join('')}
+                    ${await NewsList.render()}
                     </tbody>
                 </table>
                 </div>

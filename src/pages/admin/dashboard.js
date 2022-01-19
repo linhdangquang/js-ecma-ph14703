@@ -58,7 +58,6 @@ const Dashboard = {
           ${AdminFooter.render()}
           </div>
       </div>
-      
       `;
   },
 };

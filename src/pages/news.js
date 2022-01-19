@@ -1,47 +1,31 @@
-import { postsData } from '../data';
+import NewsList from '../components/newsList';
 
 const NewsDetails = {
   render(id) {
-    const checkId = () => {
-      const foundPost = postsData.find((post) => post.id === id);
-      if (foundPost === undefined) {
-        return '<h1>POST NOT FOUND</h1>';
-      }
-      return /* html */ `
-      <div class="py-4">
-          <h1 class="font-bold text-xl">${foundPost.title}</h1>
-          <img src="${foundPost.img}" alt="">
-          <p>${foundPost.desc}</p>
-          <small>${foundPost.createdAt}</small>
-      </div>
-      `;
-    };
-    return checkId();
+    return fetch(`https://61e7a8b4e32cd90017acbbec.mockapi.io/news/${id}`)
+      .then((response) => response.json())
+      .then(({
+        title, img, desc, createdAt,
+      }) => /* html */ `
+        <div class="py-4">
+        <h1 class="font-bold text-xl">${title}</h1>
+        <img src="${img}" alt="">
+        <p>${desc}</p>
+        <small>${createdAt}</small>
+    </div>
+        `);
   },
 };
 
 const NewsPage = {
-  render() {
+  async render() {
     return /* html */ `
-
-    <section class="pt-4">
-            <h2 class="text-2xl uppercase font-semibold text-blue-900">Tin tức</h2>
-            <div class="section-content grid grid-cols-3 gap-7 my-4">
-            ${postsData
-    .map(
-      ({
-        id, title, img, desc,
-      }) => /* html */ `
-                <div class="flex flex-col  border-2 px-6 py-4 hover:shadow-lg transition-shadow">
-                    <a class="w-full" href="/news/${id}"><img class="w-full h-56" src="${img}" alt=""></a>
-                    <a href="/news/${id}" class="text-orange-700 font-medium py-2 flex-1">${title}</a>
-                    <small class="pb-2">${desc}</small>
-                </div>
-                `,
-    )
-    .join('')}
-            </div>
     <section>
+    <h2 class="text-2xl uppercase font-semibold text-blue-900">Tin tức</h2>
+    <div class="section-content grid grid-cols-3 gap-7 my-4">
+    ${await NewsList.render()}
+    </div>
+    </section>
     `;
   },
 };

@@ -20,7 +20,7 @@ const menuList = [
     href: '/signup',
   },
   {
-    text: 'admin',
+    text: 'dashboard',
     href: '/admin/dashboard',
   },
 ];

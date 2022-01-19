@@ -9,10 +9,6 @@
             "dest": "/"
         },
         {
-            "src": "admin/dashboard",
-            "dest": "/"
-        },
-        {
             "src": "/news/(.*)",
             "dest": "/"
         },

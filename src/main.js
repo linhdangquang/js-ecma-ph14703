@@ -35,6 +35,13 @@ const printAdmin = async (content, id) => {
   container.classList.remove('container');
   container.classList.add('container-fluid');
 };
+const printNoAsync = (content) => {
+  headerEl.innerHTML = '';
+  contentEl.innerHTML = content.render();
+  footerEl.innerHTML = '';
+  container.classList.remove('container');
+  container.classList.add('container-fluid');
+};
 
 router.on({
   '/': () => {
@@ -60,14 +67,14 @@ router.on({
     print(NewsDetails, id);
   },
   '/admin/dashboard': () => {
-    printAdmin(Dashboard);
+    printNoAsync(Dashboard);
     charts.render();
   },
   '/admin/news': () => {
     printAdmin(News);
   },
   'admin/news/add': () => {
-    printAdmin(AddNews);
+    printNoAsync(AddNews);
   },
   'admin/news/:id/edit': ({ data }) => {
     const { id } = data;

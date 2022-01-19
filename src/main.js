@@ -67,7 +67,7 @@ router.on({
     print(NewsDetails, id);
   },
   '/admin/dashboard': () => {
-    printNoAsync(Dashboard);
+    printAdmin(Dashboard);
     charts.render();
   },
   '/admin/news': () => {

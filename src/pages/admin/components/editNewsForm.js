@@ -3,7 +3,7 @@ import AdminHeader from './header';
 import AdminFooter from './footer';
 
 const EditNews = {
-  render(id) {
+  async render(id) {
     return fetch(`https://61e7a8b4e32cd90017acbbec.mockapi.io/news/${id}`)
       .then((response) => response.json())
       .then(({

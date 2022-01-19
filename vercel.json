@@ -12,16 +12,13 @@
             "src": "/news",
             "dest": "/"
         },
-        {
-            "src": "/admin/dashboard",
-            "dest": "/"
-        },
-        {
-            "src": "/admin/",
-            "dest": "/"
-        },
+        
         {
             "src": "/news/(.*)",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/dashboard",
             "dest": "/"
         },
         {

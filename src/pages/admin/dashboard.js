@@ -3,10 +3,10 @@ import AdminHeader from './components/header';
 import AdminFooter from './components/footer';
 
 const Dashboard = {
-  render() {
+  async render() {
     return /* html */ `
       <div class="container-fluid admin-container flex flex-row bg-gray-100">
-        ${Navigation.render()}
+         ${Navigation.render()}
           <div class="ml-4 rounded-l-2xl relative bg-white w-full">
           ${AdminHeader.render('dashboard')}
             <div class="flex flex-wrap ml-10 pt-4">

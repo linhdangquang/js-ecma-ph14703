@@ -9,7 +9,7 @@
             "dest": "/"
         },
         {
-            "src": "/dashboard",
+            "src": "admin/dashboard",
             "dest": "/"
         },
         {

@@ -15,7 +15,7 @@ import AddNews from './pages/admin/components/addNewsForm';
 import EditNews from './pages/admin/components/editNewsForm';
 import charts from './pages/admin/components/chart';
 
-const router = new Navigo('/');
+const router = new Navigo('/', { linksSelector: 'a' });
 const headerEl = document.querySelector('#header');
 const contentEl = document.querySelector('#content');
 const footerEl = document.querySelector('#footer');

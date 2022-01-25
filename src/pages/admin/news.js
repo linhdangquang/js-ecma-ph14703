@@ -81,12 +81,12 @@ const News = {
           if (result.isConfirmed) {
             del(id).then(() => {
               reRender(News, '.admin-container');
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success',
+              );
             });
-            Swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
-              'success',
-            );
           }
         });
       });

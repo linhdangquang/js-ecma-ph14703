@@ -1,7 +1,10 @@
+import Swal from 'sweetalert2';
 import Navigation from './components/navigation';
 import AdminHeader from './components/header';
 import AdminFooter from './components/footer';
 import NewsList from './components/newsList';
+import { del } from '../../api/posts';
+import reRender from '../../utils/rerender';
 
 const News = {
   async render() {
@@ -10,7 +13,7 @@ const News = {
         ${Navigation.render()}
         <div class="ml-4 rounded-l-2xl relative bg-white w-full">
           ${AdminHeader.render('news')}
-          <div class="w-full mb-12 px-4">
+          <div class="w-full mb-12 px-4 content">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 mt-6 shadow-xl rounded bg-white drop-shadow-xl">
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
                 <div class="flex flex-wrap items-center">
@@ -24,7 +27,7 @@ const News = {
                 </div>
                 <div class="block w-full overflow-x-auto">
                 <!-- Projects table -->
-                <table class="items-center table-auto w-full bg-transparent border-collapse">
+                <table class="items-center table-auto w-full bg-transparent border-collapse" id="projects-table">
                     <thead>
                     <tr>
                         <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 font-semibold text-left ">
@@ -47,7 +50,7 @@ const News = {
                         </th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="t-body">
                     ${await NewsList.render()}
                     </tbody>
                 </table>
@@ -59,6 +62,35 @@ const News = {
       </div>
       
       `;
+  },
+  afterRender() {
+    const buttons = document.querySelectorAll('.button-del');
+    buttons.forEach((button) => {
+      const { id } = button.dataset;
+      button.addEventListener('click', () => {
+        console.log(button);
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            del(id).then(() => {
+              reRender(News, '.admin-container');
+            });
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success',
+            );
+          }
+        });
+      });
+    });
   },
 };
 export default News;

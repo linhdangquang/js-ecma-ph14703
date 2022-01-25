@@ -1,19 +1,17 @@
 import NewsList from '../components/newsList';
+import { get } from '../api/posts';
 
 const NewsDetails = {
-  render(id) {
-    return fetch(`https://61e7a8b4e32cd90017acbbec.mockapi.io/news/${id}`)
-      .then((response) => response.json())
-      .then(({
-        title, img, desc, createdAt,
-      }) => /* html */ `
+  async render(id) {
+    const { data } = await get(id);
+    return `
         <div class="py-4">
-        <h1 class="font-bold text-xl">${title}</h1>
-        <img src="${img}" alt="">
-        <p>${desc}</p>
-        <small>${createdAt}</small>
+        <h1 class="font-bold text-xl">${data.title}</h1>
+        <img src="${data.img}" alt="">
+        <p>${data.desc}</p>
+        <small>${data.createdAt}</small>
     </div>
-        `);
+        `;
   },
 };
 
@@ -28,6 +26,7 @@ const NewsPage = {
     </section>
     `;
   },
+
 };
 export default NewsPage;
 

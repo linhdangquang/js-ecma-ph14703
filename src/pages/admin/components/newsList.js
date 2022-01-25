@@ -1,17 +1,18 @@
+import axios from 'axios';
+
 const NewsList = {
-  render() {
-    return fetch('https://61e7a8b4e32cd90017acbbec.mockapi.io/news')
-      .then((response) => response.json())
-      .then((data) => /* html */`
+  async render() {
+    const { data } = await axios.get('https://61e7a8b4e32cd90017acbbec.mockapi.io/news');
+    return /* html */ `
                 ${data
     .map(
       ({
         id, title, img, desc, createdAt,
-      }) => /* html */ `
+      }, idx) => /* html */ `
       <tr class="border-b">
       <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 text-left">
       <span class="font-black text-gray-600">
-          ${id}
+          ${idx + 1}
       </span>
       </th>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
@@ -28,14 +29,17 @@ const NewsList = {
       </td>
       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
       <div class="flex">
-      <a href="/admin/news/${id}/edit" class="uppercase font-semibold hover:text-sky-600">edit
+      <a href="/admin/news/${id}/edit" class="uppercase mr-2 font-semibold hover:text-sky-600">edit
       </a>
+      <button data-id=${id} class="uppercase button-del font-semibold hover:text-sky-600">
+        Delete
+      </button>
       </td>
   </tr>
                     `,
     )
     .join('')}
-                `);
+                `;
   },
 };
 

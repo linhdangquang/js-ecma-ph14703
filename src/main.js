@@ -1,6 +1,6 @@
-// import '@themesberg/flowbite';
 import Navigo from 'navigo';
 import 'remixicon/fonts/remixicon.css';
+import 'sweetalert2/dist/sweetalert2.css';
 import HomePage from './pages/home';
 import NotFoundPage from './pages/notFound';
 import AboutPage from './pages/about';
@@ -15,7 +15,7 @@ import AddNews from './pages/admin/components/addNewsForm';
 import EditNews from './pages/admin/components/editNewsForm';
 import charts from './pages/admin/components/chart';
 
-const router = new Navigo('/', { linksSelector: 'a' });
+const router = new Navigo('/', { linksSelector: 'a', hash: true });
 const headerEl = document.querySelector('#header');
 const contentEl = document.querySelector('#content');
 const footerEl = document.querySelector('#footer');
@@ -34,6 +34,7 @@ const printAdmin = async (content, id) => {
   footerEl.innerHTML = '';
   container.classList.remove('container');
   container.classList.add('container-fluid');
+  if (content.afterRender) content.afterRender(id);
   charts.render();
 };
 
